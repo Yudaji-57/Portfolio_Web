@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 폰트 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap">
+    <!-- 아이콘 -->
+    <link rel="stylesheet" type="text/css" href="Font Awesome/css/fontawesome.min.css">
+    <link rel="shortcut icon" type="images/x-icon" href="images/logo_icon.png">
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="css/calender.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/SeachButton.css">
+    <!-- 스크립트 -->
+    <script src="js/jskill.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script src="js/bookmark.js"></script>
+    <script src="js/chColor.js"></script>
+    <script src="js/calender.js"></script>
+    <script src="js/Tinkerbell.js"></script>
+    <script src="https://kit.fontawesome.com/0e39c0c87a.js" crossorigin="anonymous"></script>
+
+    <title>포트폴리오 - 3</title>
+    <style>
+        .main-container {
+            height: 100%;
+        }
+    </style>
+</head>
+
+
+
+<body id="theBody">
+
+
+    <form class='search'>
+        <input class='keyword' type='text' placeholder='검색할 것을 입력하세요' name='search' maxlength=255 value=""
+            autocomplete="off">
+        <button class="img-button" type="submit" name="click" value="" title="search">
+            <i class="fas fa-search"></i>
+        </button>
+
+
+
+        <select class='SelectSearch' name='WhichSearch'>
+            <option class="ot" id="Null" value="Null">선택하세요</option>
+            <option class="ot" id='google' value='google'>Google</option>
+            <option class="ot" id='naver' value='naver'>Naver</option>
+            <option class="ot" id='youtube' value='youtube'>YouTube</option>
+        </select>
+    </form>
+
+
+    <div class="main-container" id="theBody">
+        <!-- HEADER -->
+        <header class="block" id="theBody" style="border-radius: 15px;">
+            <ul class="header-menu horizontal-list">
+                <li>
+                    <a class="header-menu-tab" href="" title="Home">
+                        <button class="img-button" name="Home" style="line-height: 4;">
+                            <i class="fas fa-solid fa-house fa-2px"></i>
+                        </button>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a class="header-menu-tab" href="#" id="favorite" title="북 마크">
+                        <i class="fa-solid fa-star"></i> 북 마크
+                    </a>
+                </li>
+
+                <li>
+                    <a class="header-menu-tab" href="https://yudaji.synology.me/web/TestWeb/music/NCS/ncs_music_1.html"
+                        title="브금듣기" target="_blank">
+                        <i class="fa-solid fa-music"></i> 음악
+                    </a>
+                </li>
+
+                <li>
+                    <a class="header-menu-tab" href="photo.html" title="사진">
+                        <i class="fa-solid fa-image"></i> 갤러리
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="profile-menu" style="border: 1px solid transparent;">
+                <p id="nameText"><a href="#26"></a></p>
+                <div class="profile-picture small-profile-picture">
+                    <img width="40px" alt="Anne Hathaway picture" src="images/보노보노 - 뇽뇽.png">
+                </div>
+            </div>
+
+        </header>
+        <!-- LEFT-CONTAINER -->
+        <div class="left-container container">
+            <div class="menu-box block" style="border-radius: 15px;">
+                <!-- MENU BOX (LEFT-CONTAINER) -->
+                <h2 class="titular">메뉴</h2>
+                <ul class="menu-box-menu">
+                    <li>
+                        <a class="menu-box-tab" href="#12" onclick="chColor()">
+                            <span class="icon entypo-cog scnd-font-color"></span>배경 변경</a>
+                    </li>
+                    <li>
+                        <a class="menu-box-tab" href="#13" onclick="Color_1()">
+                            <sapn class="icon entypo-chart-line scnd-font-color"></sapn>배경 되돌리기
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="donut-chart-block block" style="border-radius: 25px; height: 465px;">
+                <!-- 날씨 (MIDDLE-CONTAINER) -->
+                <div class="tomorrow" data-location-id="065438" data-language="KO" data-unit-system="METRIC"
+                    data-skin="dark" data-widget-type="upcoming" style="padding-bottom:22px; position:relative;">
+                    <a href="https://www.tomorrow.io/weather/" rel="nofollow noopener noreferrer" target="_blank"
+                        style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
+
+                    </a>
+                </div>
+            </div>
+            <div class="media block" style="width: 300px;" style="border-radius: 20px;">
+                <!-- 비디오 (좌측 컨테이너) -->
+                <div>
+                    <iframe class="media-btn play" id="myVideo" src="https://www.youtube.com/embed/TrkNoSk29pc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen height="330px"
+                        style="border-radius: 15px; width: 100%; height: 330px;"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- 중간 컨테이너 -->
+        <div class="middle-container container">
+            <div class="profile block" style="border-radius: 15px;">
+                <!-- 중간 프로필 (중간 컨테이너) -->
+                <a class="add-button" title="별명변경" onclick="NameUpdate()">
+                    <span class="icon entypo-plus scnd-font-color"></span>
+                </a>
+
+                <div class="profile-picture big-profile-picture clear ">
+                    <div><img width="150px" src="images/보노보노 - 뇽뇽.png" alt="1"></div>
+                </div>
+                <h1 class="user-name">test</h1>
+                <div class="profile-description">
+                    <p class="scnd-font-color">자기 개발을 하기 위해 열공중..</p>
+                    <div class="watch">
+                        <span class="text-rainbow" id="getDate"></span><br>
+                        <span class="text-rainbow" id="apm"></span>
+                        <span class="text-rainbow" id="clock"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar-month block clear" style="border-radius: 15px;">
+                <div class="sec_cal">
+                    <div class="cal_nav">
+                        <a href="javascript:;" class="nav-btn go-prev">prev</a>
+                        <div class="year-month"></div>
+                        <a href="javascript:;" class="nav-btn go-next">next</a>
+                    </div>
+                    <div class="cal_wrap">
+                        <div class="days">
+
+                            <div class="day"><b>MON</b></div>
+                            <div class="day"><b>TUE</b></div>
+                            <div class="day"><b>WED</b></div>
+                            <div class="day"><b>THU</b></div>
+                            <div class="day"><b>FRI</b></div>
+                            <div class="day"><b>SAT</b></div>
+                            <div class="day"><b>SUN</b></div>
+                        </div>
+                        <div class="dates">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end main-container -->
+</body>
+
+</html>
+
+
+<script>
+    var Target_date = document.getElementById("GetDate");
+    var Target = document.getElementById("clock");
+    var Target_apm = document.getElementById("apm");
+    function clock() {
+        var time = new Date();
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+        var year = time.getFullYear();
+        var month = time.getMonth() + 1;
+        var day = time.getDate();
+
+        var AmPm = "AM";
+
+        if (hours > 12) {
+            var AmPm = "PM";
+            hours %= 12;
+        }
+
+        getDate.innerHTML = `${year < 10 ? `0${year}` : year}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${day}` : day}`;
+
+        Target.innerText =
+            `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+        Target_apm.innerText = `${AmPm}`;
+    }
+    clock();
+    setInterval(clock, 1000); // 1초마다 실행
+</script>
+
+<script> // 검색기능
+    const Searching = Search.prototype;
+
+    function Search() {
+        this.keyword = document.querySelector('input[name = "search"]');
+        this.engine = document.querySelector('.SelectSearch');
+        this.button = document.querySelector('.img-button');
+        this.form = document.querySelector('.search');
+
+        this.Engine();
+    }
+    Searching.Engine = function () {
+        this.form.addEventListener('submit', e => {
+
+            e.preventDefault();
+
+            let engine = this.engine.value;
+            let keyword = this.keyword.value;
+
+
+            if (keyword === '') {
+                alert("검색 입력하세요");
+                return;
+            }
+            if (engine === 'google') {
+                // window.open('https://www.google.co.kr/search?q=' + keyword);
+                location.href = 'https://www.google.co.kr/search?q=' + keyword;
+            } else if (engine === 'naver') {
+                // window.open('https://search.naver.com/search.naver?query=' + keyword);
+                location.href = 'https://search.naver.com/search.naver?query=' + keyword;
+            } else if (engine === 'youtube') {
+                window.open('https://www.youtube.com/results?search_query=' + keyword);
+                // location.href = 'https://www.youtube.com/results?search_query=' + keyword;
+            } else if (engine === 'Null') {
+                // document.write(keyword);
+                alert("검색엔진을 선택하세요");
+                return;
+            }
+
+        });
+    }
+    new Search();
+</script>
+
+<script>
+    (function (d, s, id) {
+        if (d.getElementById(id)) {
+            if (window.__TOMORROW__) {
+                window.__TOMORROW__.renderWidget();
+            }
+            return;
+        }
+        const fjs = d.getElementsByTagName(s)[0];
+        const js = d.createElement(s);
+        js.id = id;
+        js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+        fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'tomorrow-sdk');        
+</script>
+
+<script>
+    function NameUpdate() {
+        var name = window.prompt("이름을 입력하세요", "");
+        console.log(name);
+
+        if (name === '') {
+            return alert("다시 입력해주세요");
+        } else if (name === null) {
+            return alert("다시 입력해주세요");
+        } else {
+            alert(name + "님 어서오세요");
+        }
+        document.getElementById("nameText").innerText = name + "님";
+    }
+</script>
+
+<script>
+    var vid = document.getElementById("myVideo");
+    vid.volume = 0.3;
+</script>
