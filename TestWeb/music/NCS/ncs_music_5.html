@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/music.css">
+    <link rel="shortcut icon" type="images/x-icon" href="images/NCS_logo.jpg">
+    <title>NCS Music Play</title>
+    <html>
+
+    <head>
+
+        <title>NCS Music Play</title>
+        <script type="text/javascript">
+
+            function init() {
+                document.addEventListener('click', function (evt) { if (evt.target.tagName.toLowerCase() == 'li') { play(evt.target); } }, false);
+            }
+
+            function skip() {
+            }
+
+            function play(elem) {
+                var audio = document.getElementById('audio');
+                audio.src = 'music/ncs_5/' + elem.textContent + '.mp3';
+                audio.play();
+                elem.className = 'playing';
+                skip = function () {
+                    elem.className = '';
+                    if (elem.nextElementSibling) {
+                        play(elem.nextElementSibling);
+                    }
+                }
+            }
+        </script>
+        <style type="text/css">
+            ul {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+            }
+
+            li:hover {
+                text-decoration: underline;
+            }
+
+            li.playing {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+<body onload="init()">
+    <h1 style="text-align: center;">NCS Music Play</h1>
+    <hr />
+    <div class="musicplay">
+        <audio id="audio" controls="controls" onerror="alert('Could not play MP3 audio file ' + this.src +'!');"
+            onended="skip()" style="width: 1400px;">
+            HTML5 MP3 audio required (Chrome, Safari, IE 9?)
+        </audio>
+    </div>
+    <ul>
+        <ol type="1">
+            <li>RudeLies & Distrion - One, Two [NCS Release].mp3</li>
+            <li>RudeLies & Facading - Arabian Nights [NCS Release].mp3</li>
+            <li>RYVN - Avatar [NCS Release].mp3</li>
+            <li>Sam Day & Dust of Apollon - Take You Home [NCS Release].mp3</li>
+            <li>Sam Day - Nothing To Hide [NCS Release].mp3</li>
+            <li>Sam Ourt & FERGO - Love Me [NCS Release].mp3</li>
+            <li>Sam Ourt, AKIAL & Srikar - Escape [NCS Release].mp3</li>
+            <li>Sekai - Burn Me Down [NCS Release].mp3</li>
+            <li>Severin & Like Lions - I Hear Sleigh Bells [NCS Release].mp3</li>
+            <li>SFRNG, Madzi, Just Isac & Custody - No Way Back [NCS Release].mp3</li>
+            <li>Shiah Maisel & ESAI - Away From Me [NCS Release].mp3</li>
+            <li>Shiah Maisel, Abstrakt, Perk Pietrek - Running Away [NCS Release].mp3</li>
+            <li>Simbai & Eyemèr - Thunder [NCS Release].mp3</li>
+            <li>Simbai & Frizzy The Streetz - Set Me Free [NCS Release].mp3</li>
+            <li>Simon Says! - one more time (feat. Devonte) [NCS Release].mp3</li>
+            <li>SirensCeol - Stay [NCS10 Release].mp3</li>
+            <li>Sk-Hall & Ludwiig - New Beginning[NCS Release].mp3</li>
+            <li>Slashtaq & Wanden - Full Speed Ahead [NCS Release].mp3</li>
+            <li>Slippy & Blosso - Horizon (Back To Life) (Feat. GLNNA) [NCS Release].mp3</li>
+            <li>SOXX - Trouble With Love [NCS Release].mp3</li>
+            <li>Spektrum & Sara Skinner - Keep You [NCS Release].mp3</li>
+            <li>Spirix - Rampage Diet [NCS Release].mp3</li>
+            <li>Star Party - Legends [NCS Release].mp3</li>
+            <li>STAR SEED & Cafe Disko - Innocent (feat. Michaella) [NCS Release].mp3</li>
+            <li>STAR SEED - Cayenne (feat. Zoe Moon) [NCS Release].mp3</li>
+            <li>Stereotype - TOKYO 2099 [NCS Release].mp3</li>
+            <li>Steve Hartz - Never Get Old [NCS Release].mp3</li>
+            <li>Steve Hartz - Never Give Up [NCS Release].mp3</li>
+            <li>Sub Urban - Cradles [NCS Release].mp3</li>
+            <li>SUBSHOCK & EVANGELOS x MIDNIGHT CVLT - Beyond The Skies [NCS Release].mp3</li>
+            <li>Summer Was Fun & Laura Brehm - Prism [NCS Release].mp3</li>
+            <li>SVRRIC & RUINDKID - Fall To My Grave ft. Silent Child [NCS Release].mp3</li>
+            <li>Syn Cole - Gizmo [NCS Release].mp3</li>
+            <li>Syn Cole - Keep Going [NCS Release].mp3</li>
+            <li>Syn Cole - Melodia [NCS Release].mp3</li>
+            <li>Syn Cole - Time [NCS Release].mp3</li>
+            <li>T & Sugah ft. Mara Necia - Bring Me The Light (Rob Gasser Remix) [NCS Release].mp3</li>
+            <li>T-Mass & Britt Lari - Like Me [NCS Release].mp3</li>
+            <li>Tetrix Bass & ROY KNOX - When I'm Gone (feat. Ellen Louise) [NCS Release].mp3</li>
+            <li>Teyeq - Demons [NCS Release].mp3</li>
+            <li>Teyeq - Pull Me Down [NCS Release].mp3</li>
+            <li>The Arcturians & Defunk - Back For More [NCS Release].mp3</li>
+            <li>The Arcturians & Defunk - Emotions [NCS Release].mp3</li>
+            <li>The Arcturians & hayve - Bit By Bit [NCS Release].mp3</li>
+            <li>The Arcturians - This Is Life [NCS Release].mp3</li>
+            <li>The Same Persons - Versace [NCS Release].mp3</li>
+            <li>THYKIER - INTENSIFY [NCS Release].mp3</li>
+            <li>THYKIER - THE LIMIT [NCS Release].mp3</li>
+            <li>Tim Beeren & Chenda - No Pressure (feat. Jon Becker) [NCS Release].mp3</li>
+            <li>Time To Talk & Avaya Ft. RYVM - Found You [NCS Release].mp3</li>
+            <li>Time To Talk - Time To Talk ft. Georgia Michel [NCS Release].mp3</li>
+            <li>Time To Talk Ft. Dave Marriner - Say The Words [NCS Release].mp3</li>
+            <li>Tinoma - Find You [NCS Release].mp3</li>
+            <li>Tisoki & Cajama - Feelings [NCS Release].mp3</li>
+            <li>Tobu - If I Disappear (ft. Tom Mårtensson) [NCS Release].mp3</li>
+            <li>Tobu - Turn It Up [NCS Release].mp3</li>
+            <li>Todd Helder & Guy Arthur feat. TITUS - Closer [NCS Release].mp3</li>
+            <li>Todd Helder - Never Stop [NCS Release].mp3</li>
+            <li>Tokyo Machine - SLASH [NCS10 Release].mp3</li>
+            <li>Tollef - Capsized [NCS Release].mp3</li>
+            <li>Tollef - Take Our Time [NCS Release].mp3</li>
+            <li>Tom Wilson - Be Myself [NCS Release].mp3</li>
+            <li>Tom Wilson - Run For Your Life (ft. M.I.M.E) [NCS Release].mp3</li>
+            <li>Tom Wilson - Until I Die (feat. joegarratt) [NCS Release].mp3</li>
+            <li>Tritan - Hollow Life (feat. Ratfoot) [NCS Release].mp3</li>
+            <li>Unknown Brain & Hoober - Phenomenon (ft. Dax & VinDon) [NCS Release].mp3</li>
+            <li>Unknown Brain & Kyle Reynolds - I'm Sorry Mom [NCS Release].mp3</li>
+            <li>Unknown Brain - Dancing On The Moon (ft. Luke Burr) [NCS Release].mp3</li>
+            <li>Unknown Brain - DEAD (ft. KAZHI) [NCS Release].mp3</li>
+            <li>Unknown Brain - Hollywood Perfect (ft. NotEvenTanner) [NCS Release].mp3</li>
+            <li>Unknown Brain - Say Goodbye (ft. Marvin Divine) [NCS Release].mp3</li>
+            <li>Unknown Brain - War Zone (ft. M.I.M.E.) [NCS Release].mp3</li>
+            <li>Unknown Brain, Heather Sommer - Perfect 10 (Unknown Brain & RudeLies VIP) [NCS Release].mp3</li>
+            <li>V O E - Giants [NCS Release].mp3</li>
+            <li>Vaance & Deerock - Electric (feat. Robbie Rosen) [NCS Release].mp3</li>
+            <li>Valcos & Chris Linton - Without You [NCS Release].mp3</li>
+            <li>Vosai & Facading - Crossed The Line (feat. Linn Sandin) [NCS Release].mp3</li>
+            <li>Vosai & Facading - Fighting Fire (ft. Linn Sandin) [NCS Release].mp3</li>
+            <li>Vosai - Love Of My Life [NCS Release].mp3</li>
+            <li>Vosai - Young & Wild & Free [NCS Release].mp3</li>
+            <li>Wanden & Slashtaq - Better Off [NCS Release].mp3</li>
+            <li>WATEVA & Fiveight - Get $ [NCS Release].mp3</li>
+            <li>WATEVA - Ber Zer Ker (Rob Gasser Remix) [NCS Release].mp3</li>
+            <li>WATEVA - dead! [NCS Release].mp3</li>
+            <li>Whales & ggnoaa - Paranoia [NCS Release].mp3</li>
+            <li>Whales & Jo Cohen - Love Is Gone [NCS Release].mp3</li>
+            <li>Whales - Lights [NCS Release].mp3</li>
+            <li>whogaux - i don't care [NCS Release].mp3</li>
+            <li>WIBERG & WBN - Complicated [NCS Release].mp3</li>
+            <li>Wiguez & EH!DE - The Path (ft. Agassi) [NCS Release].mp3</li>
+            <li>Wiguez & Vizzen - Love Me Better [NCS Release].mp3</li>
+            <li>Wiguez - Pray Tonight (ft. P-One) [NCS Release].mp3</li>
+            <li>Xaia, Rain Man, Oly - Breakdown [NCS Release].mp3</li>
+            <li>XØ SELF - dR3ÄMS (ft. ARZĘ) [NCS Release].mp3</li>
+            <li>Zack Merci & Arcana - Love Potion [NCS Release].mp3</li>
+            <li>Zack Merci - BOUNCE! (feat. Nieko) [NCS Release].mp3</li>
+            <li>Zack Merci - Ray of Light (feat. Nieko) [NCS Release].mp3</li>
+            <li>Zack Merci X CRVN - Nobody [NCS Release].mp3</li>
+            <li>Zeneth & Knoir - Beam (ft. Gabriella) [NCS Release].mp3</li>
+            <li>Zeus X Crona - Who doesn't wanna fall in love (ft. Veronica Bravo) [NCS Release].mp3</li>
+        </ol>
+    </ul>
+    <footer>
+        <hr />
+        <div>
+            <a href="ncs_music_1.html">1</a>
+            <a href="ncs_music_2.html">2</a>
+            <a href="ncs_music_3.html">3</a>
+            <a href="ncs_music_4.html">4</a>
+            <a href="ncs_music_5.html">5</a>
+            <a href="#"> >></a>
+        </div>
+        <!-- ddd -->
+        <hr />
+    </footer>
+</body>
+
+</html>

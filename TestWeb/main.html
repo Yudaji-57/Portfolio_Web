@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="">
+  <title>Test Web</title>
+
+</head>
+
+<body>
+  <div id="">
+    <div class="header_text">
+      <ul>
+        <li class="header_li">Skills</li>
+        <li class="header_li">About</li>
+        <li class="header_li">Home</li>
+      </ul>
+      <div class="blank_white"></div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <table id="t_table">
+
+    <tr>
+      <td id="t_header">Header2</td>
+
+    </tr>
+
+    <tr>
+      <td id="t_nav">
+        <button id="m_button" title="Music">
+          <a href="music/music_main.html" target="_blank"><img src="images/Music.gif" alt="Music"></a>
+        </button>
+        <button id="m_button" title="Video">
+          <img src="images/video.gif" alt="Video">
+        </button>
+
+
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color:#ddd;width:280px;">
+        Section
+
+        <p style="background-color:#efefef;width:265px;margin:10px;">Article</p>
+      </td>
+      <!-- <td style="background-color:#ddd;height:60px;">Aside</td> -->
+    </tr>
+    <tr>
+      <td colspan="2" style="background-color:#ddd">해당 사이트는 연습용 및 포트폴리오</td>
+    </tr>
+  </table>
+
+  <!-- <header>Header
+        <nav>Nav</nav>
+    </header>
+    <div id="aside">Aside</div>
+    <div id="section">
+      Section
+      <div id="article">Article</div>
+    </div>
+    
+    <div id="footer">Footer
+        <time>2022.07.08</time>
+    </div> -->
+
+</body>
+
+</html>
+
+<script>
+  date = new Date();
+  year = date.getFullYear();
+  month = date.getMonth() + 1;
+  day = date.getDate();
+  document.getElementById("current_date").innerHTML = month + "/" + day + "/" + year;
+</script>
+
+
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>clock2</title>
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <span id="clock" style="color:gray; font-size: 100px;">clock</span>
+        <span id="apm" style="color:gray; font-size: 50px;"  >ampm</span>
+    </div>
+    
+
+    <script>
+        var Target = document.getElementById("clock");
+        var Target_apm = document.getElementById("apm");
+        function clock() {
+            var time = new Date();
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+            var AmPm ="AM";
+            if(hours > 12){   
+                var AmPm ="PM";
+                hours %= 12;
+            }
+
+            Target.innerText = 
+            `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+            Target_apm.innerText = `${AmPm}`;
+
+        }
+        clock();
+        setInterval(clock, 1000); // 1초마다 실행
+    </script>
+</body>
+</html> -->

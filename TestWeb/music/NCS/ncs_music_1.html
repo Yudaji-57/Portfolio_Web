@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/music.css">
+    <link rel="shortcut icon" type="images/x-icon" href="images/NCS_logo.jpg">
+    <title>NCS Music Play</title>
+    <html>
+
+    <head>
+
+        <title>NCS Music Play</title>
+        <script type="text/javascript">
+
+            function init() {
+                document.addEventListener('click', function (evt) { if (evt.target.tagName.toLowerCase() == 'li') { play(evt.target); } }, false);
+            }
+
+            function skip() {
+            }
+
+            function play(elem) {
+                var audio = document.getElementById('audio');
+                audio.src = 'music/ncs_1/' + elem.textContent + '.mp3';
+                audio.play();
+                elem.className = 'playing';
+                skip = function () {
+                    elem.className = '';
+                    if (elem.nextElementSibling) {
+                        play(elem.nextElementSibling);
+                    }
+                }
+            }
+        </script>
+        <style type="text/css">
+            ul {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+            }
+
+            li:hover {
+                text-decoration: underline;
+            }
+
+            li.playing {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+<body onload="init()">
+    <h1 style="text-align: center;">NCS Music Play</h1>
+    <hr />
+    <div class="musicplay">
+        <audio id="audio" controls="controls" onerror="alert('Could not play MP3 audio file ' + this.src +'!');"
+            onended="skip()"  aria-valuenow="0.3" style="width: 100%;">
+            HTML5 MP3 audio required (Chrome, Safari, IE 9?)
+        </audio>
+    </div>
+    <ul>
+        <ol type="1">
+            <li>10 Years Of NCS</li>
+            <li>Abandoned & GalaxyTones - Luna (Feat. DNAKM) [Mendum Remix] [NCS Release]</li>
+            <li>Abstrakt - Nobody Else [NCS Release]</li>
+            <li>Abstrakt - U [NCS10 Release]</li>
+            <li>Alex Skrindo, Severin & Like Lions - Heart [NCS Release]</li>
+            <li>Alisky - On [NCS Release]</li>
+            <li>Alva Gracia - Emotions Like [NCS Release]</li>
+            <li>Andromedik & Used - Take Me [NCS Release]</li>
+            <li>Anna Yvette - Running Out of Time [NCS Release]</li>
+            <li>Arc North - Symphony (feat. Donna Tella) [NCS10 Release]</li>
+            <li>Arcando - In My Head (feat. Britt Lari) [NCS Release]</li>
+            <li>Arya & blankfaces - Daydream [NCS Release]</li>
+            <li>Beave - Talk [NCS Release]</li>
+            <li>borne & Arya - One More Try (feat. imallryt) [NCS Release]</li>
+            <li>Cajama - You Did Me Wrong [NCS Release]</li>
+            <li>Cartoon & Andromedik - Whatever (ft. Jüri Pootsmann) [NCS Release]</li>
+            <li>Cartoon - On & On (Feat. Daniel Levi) (nuumi Remix) [NCS Release]</li>
+            <li>Cartoon x Time To Talk - Omen (Ft. Asena) [NCS10 Release]</li>
+            <li>Chenda & Shiah Maisel - Find You There [NCS Release]</li>
+            <li>Chris Later & Dany Yeager - There's Nobody Else [NCS Release]</li>
+            <li>Clarx - Done (feat. Halvorsen) [NCS Release]</li>
+            <li>Clarx, Catas, Le Malls, CHENDA, Anikdote - Numb The Pain (feat. Shiah Maisel) [NCS10 Release]</li>
+            <li>Coopex, Nito-Onna & DJ Frog - Whispered Promises [NCS Release]</li>
+            <li>Cream Blade - Daydream (feat. romi) [NCS Release]</li>
+            <li>Culture Code - You & I (feat. Alexis Donn) [NCS10 Release]</li>
+            <li>Curbi - What You Like [NCS10 Release]</li>
+            <li>DigEx - Fall In Love [NCS Release]</li>
+            <li>Diviners & Azertion - Feelings [NCS Release]</li>
+            <li>Diviners & Azertion - Reality (feat. Dayce Williams) [NCS Release]</li>
+            <li>Diviners, IZECOLD & Tim Beeren - This Time (ft. CRVN & Molly Ann) [NCS10 Release]</li>
+            <li>Egzod & Arcando - Runaway (feat. Mathew V) [NCS Release]</li>
+            <li>Egzod & Maestro Chives - Royalty (ft. Neoni) (Wiguez & Alltair Remix) [NCS Release]</li>
+            <li>Egzod, Maestro Chives & Alaina Cross - No Rival [NCS Release]</li>
+            <li>Elektronomia & RUD - Rollercoaster [NCS10 Release]</li>
+            <li>Elektronomia x Lunaar x Donna Tella - Champions [NCS Release]</li>
+            <li>Evanly - Hurt Me [NCS Release]</li>
+            <li>Everen Maxwell - A Day at Sea [NCS Release]</li>
+            <li>Everen Maxwell - Hyperphantasia [NCS Release]</li>
+            <li>Fiko - Waiting For You [NCS Release]</li>
+            <li>Goodknight. - Freedom [NCS Release]</li>
+            <li>Guy Arthur & Clarx - For Good (ft. Veronica Bravo) [NCS Release]</li>
+            <li>hayve - Half Alive (feat. imallryt) [NCS Release]</li>
+            <li>Highlnd - How To Love (ft. Rachel Lorin) [NCS Release]</li>
+            <li>Icehunt - Back To Time (with Broad Run, Arnie Woods & Ethan Heckard) [NCS Release]</li>
+            <li>if found - Dead of Night (VIP) [NCS Release]</li>
+            <li>James Roche - Away [NCS Release]</li>
+            <li>Jay Eskar & Doxed - Let's Run Away (feat. Rico 56) [NCS Release]</li>
+            <li>Jay Eskar - To The Top (feat. Srikar) [NCS Release]</li>
+            <li>Jim Yosef, Electro-Light, Anna Yvette, Deaf Kev & Tobu - Destiny [NCS10 Release]</li>
+            <li>JJD - A New Adventure (feat. Molly Ann) [NCS10 Release]</li>
+            <li>JNATHYN - Dioma (Demo TikTok Version) [NCS Release]</li>
+            <li>JNATHYN - Rise [NCS10 Release]</li>
+            <li>Jonth, Tom Wilson, Facading, MAGNUS, Jagsy, Vosai, RudeLies & Domastic - Heartless [NCS10 Relea]</li>
+            <li>JPB - High (feat. Aleesia) [NCS10 Release]</li>
+            <li>JPB - Long Night pt. II (feat. M.I.M.E & Drama B) [NCS Release]</li>
+            <li>Kato, Spyker, TOBSIK - Odyssey [NCS Release]</li>
+            <li>Keerthin - Escape [NCS Release]</li>
+            <li>Koven - Looking For More [NCS10 Release]</li>
+            <li>Lost Identities x Robbie Rosen - Moments [NCS Release]</li>
+            <li>MAGNUS & The Saint - Pretty Woman [NCS Release]</li>
+            <li>MILANE & Greg Aven - Like You [NCS Release]</li>
+            <li>Millbrook - Lost Without You (ft. Felix Samuel) [NCS Release]</li>
+            <li>More Plastic & VinDon - Patience [NCS Release]</li>
+            <li>More Plastic - Old School [NCS Release]</li>
+            <li>NATSUMI - Take Me Away [NCS Release]</li>
+            <li>NCS- 10 Billion Views Mix - Copyright Free Music</li>
+            <li>Netrum & Halvorsen - Phoenix [NCS10 Release]</li>
+            <li>Netrum - Pixie Dust [NCS10 Release]</li>
+            <li>NIVIRO - The Edge (feat. Harley Bird) [NCS Release]</li>
+            <li>OBLVYN x RIELL - With You [NCS Release]</li>
+            <li>Papa Khan - I GOT YOU [NCS Release]</li>
+            <li>Papa Khan - Wounds [NCS10 Release]</li>
+            <li>Perk Pietrek & Abstrakt - Pressure [NCS Release]</li>
+            <li>QR - XXI [NCS Release]</li>
+            <li>Raptures & DigEx - Feel [NCS Release]</li>
+            <li>Raptures & SOXX - Signs (feat. Barmuda) [NCS Release]</li>
+            <li>Raptures - Spark [NCS Release]</li>
+            <li>Razihel - A Song About You [NCS10 Release]</li>
+            <li>Razihel - Faster [NCS Release]</li>
+            <li>Rival - Falling (with CRVN) [NCS Release]</li>
+            <li>Rival - Throne (ft. Neoni) (Lost Identities Remix) [NCS Release]</li>
+            <li>Rival x Asketa & Natan Chaim - Superhero In My Sleep [NCS10 Release]</li>
+            <li>RudeLies, Distrion, Alex Skrindo & Axol - Together [NCS10 Release]</li>
+            <li>RYVN - Avatar [NCS Release]</li>
+            <li>Sam Ourt, AKIAL & Srikar - Escape [NCS Release]</li>
+            <li>Sekai, Spitfya, Rob Gasser - Mistakes (ft. Emily Stiles) [NCS10 Release]</li>
+            <li>Severin & Like Lions - I Hear Sleigh Bells [NCS Release]</li>
+            <li>SFRNG, Madzi, Just Isac & Custody - No Way Back [NCS Release]</li>
+            <li>Shiah Maisel & ESAI - Away From Me [NCS Release]</li>
+            <li>Shiah Maisel, Abstrakt, Perk Pietrek - Running Away [NCS Release]</li>
+            <li>Siberian Express - Talk To Me [NCS Release]</li>
+            <li>Siimi - Here For Me (feat. m els) [NCS Release]</li>
+            <li>Simbai & Frizzy The Streetz - Crazy [NCS Release]</li>
+            <li>Simbai & Frizzy The Streetz - Set Me Free [NCS Release]</li>
+            <li>STAR SEED & Cafe Disko - Innocent (feat. Michaella) [NCS Release]</li>
+            <li>STAR SEED - Chasing Stars [NCS Release]</li>
+            <li>Syn Cole - Melodia [NCS Release]</li>
+            <li>T & Sugah - Bring Me The Light (feat. Mara Necia) [NCS Release]</li>
+            <li>T & Sugah ft. Mara Necia - Bring Me The Light (Rob Gasser Remix) [NCS Release]</li>
+            <li>Tetrix Bass & ROY KNOX - When I'm Gone (feat. Ellen Louise) [NCS Release]</li>
+            <li>The Arcturians & Defunk - Back For More [NCS Release]</li>
+            <li>The Arcturians & Defunk - Emotions [NCS Release]</li>
+            <li>Thumbs.db</li>
+            <li>THYKIER - Station 2 [NCS10 Release]</li>
+            <li>Time To Talk - Bittersweet (feat. Roses) [NCS Release]</li>
+            <li>Time To Talk, Azertion & JJD - Street Lights (Ft. Axollo) [NCS10 Release]</li>
+            <li>Tisoki & Cajama - Feelings [NCS Release]</li>
+            <li>Tobu - If I Disappear (ft. Tom Mårtensson) [NCS Release]</li>
+            <li>Tobu - Lost [NCS10 Release]</li>
+            <li>Tollef - Take Our Time [NCS Release]</li>
+            <li>Tom Wilson - Zero Gravity (ft. Jauque X) [NCS10 Release]</li>
+            <li>Whales & Jo Cohen - Love Is Gone [NCS Release]</li>
+            <li>WIBERG & WBN - Complicated [NCS Release]</li>
+            <li>Wiguez & EH!DE - The Path (ft. Agassi) [NCS Release]</li>
+            <li>Wiguez - Pray Tonight (ft. P-One) [NCS Release]</li>
+            <li>Zack Merci - BOUNCE! (feat. Nieko) [NCS Release]</li>
+            <li>Zack Merci - Ray of Light (feat. Nieko) [NCS Release]</li>
+            <li>Zack Merci X CRVN - Nobody [NCS Release]</li>
+            <li>Zeneth & Knoir - Beam (ft. Gabriella) [NCS Release]</li>
+            <li>Zeus X Crona & Shiah Maisel - Run & Hide [NCS Release]</li>
+        </ol>
+    </ul>
+    <footer>
+        <hr />
+        <div>
+            <a href="ncs_music_1.html">1</a>
+            <a href="ncs_music_2.html">2</a>
+            <a href="ncs_music_3.html">3</a>
+            <a href="ncs_music_4.html">4</a>
+            <a href="ncs_music_5.html">5</a>            
+            <a href="#"> >></a>
+        </div>
+        <!-- ddd -->
+        <hr />
+    </footer>
+</body>
+
+</html>
+
+<script>
+    var vid = document.getElementById("myVideo").className("mySound");
+    vid.volume = 0.3;
+</script>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/music.css">
+    <link rel="shortcut icon" type="images/x-icon" href="images/NCS_logo.jpg">
+    <title>NCS Music Play</title>
+    <html>
+
+    <head>
+
+        <title>NCS Music Play</title>
+        <script type="text/javascript">
+
+            function init() {
+                document.addEventListener('click', function (evt) { if (evt.target.tagName.toLowerCase() == 'li') { play(evt.target); } }, false);
+            }
+
+            function skip() {
+            }
+
+            function play(elem) {
+                var audio = document.getElementById('audio');
+                audio.src = 'music/ncs_2/' + elem.textContent + '.mp3';
+                audio.play();
+                elem.className = 'playing';
+                skip = function () {
+                    elem.className = '';
+                    if (elem.nextElementSibling) {
+                        play(elem.nextElementSibling);
+                    }
+                }
+            }
+        </script>
+        <style type="text/css">
+            ul {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+            }
+
+            li:hover {
+                text-decoration: underline;
+            }
+
+            li.playing {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+<body onload="init()">
+    <h1 style="text-align: center;">NCS Music Play</h1>
+    <hr />
+    <div class="musicplay">
+        <audio id="audio" controls="controls" onerror="alert('Could not play MP3 audio file ' + this.src +'!');"
+            onended="skip()" style="width: 1400px;">
+            HTML5 MP3 audio required (Chrome, Safari, IE 9?)
+        </audio>
+    </div>
+    <ul>
+        <ol type="1">
+            <li>2 Souls - Lonely (ft. Nara) [NCS Release]</li>
+            <li>32Stitches - Olympus [NCS Release]</li>
+            <li>32Stitches - Uncharted [NCS Release]</li>
+            <li>3rd Prototype - After the Storm [NCS Release]</li>
+            <li>3rd Prototype - Blue [NCS Release]</li>
+            <li>3rd Prototype - I'm Fine [NCS Release]</li>
+            <li>3rd Prototype - Renegade (feat. Harley Bird & Valentina Franco) [NCS Release]</li>
+            <li>3rd Prototype - Shadows [NCS Release]</li>
+            <li>Abandoned & GalaxyTones - Luna (Feat. DNAKM) [Mendum Remix] [NCS Release]</li>
+            <li>Abandoned & GalaxyTones - Luna (Feat. DNAKM) [NCS Release]</li>
+            <li>Abandoned & Shiah Maisel - Finally Healing [NCS Release]</li>
+            <li>Abandoned - Out Of The Grave (Feat. ENROSA) [NCS Release]</li>
+            <li>Abandoned, InfiNoise & Mendum - See You at the End (feat. Brenton Mattheus) [NCS Release]</li>
+            <li>Abstrakt - Nobody Else [NCS Release]</li>
+            <li>Aeden & Harley Bird - Find A Way Out [NCS Release]</li>
+            <li>Aeden & Joellé - I Feel Crazy [NCS Release]</li>
+            <li>Aeden & Um41K - Ain't Nobody Perfect [NCS Release]</li>
+            <li>Alex Holmes & Dark Point - You Are [NCS Release]</li>
+            <li>Alisky - Grow (feat. VØR) [NCS Release]</li>
+            <li>Almost Weekend & Max Vermeulen - Island (ft. Michael Shynes) [NCS Release]</li>
+            <li>Almost Weekend & Max Vermeulen - Let Me Go (ft. Jimmy Rivler) [NCS Release]</li>
+            <li>Alva Gracia - Emotions Like [NCS Release]</li>
+            <li>Andreas Stone With Denniz Jamm - Black Sunrise [NCS Release]</li>
+            <li>Andromedik & Used - Take Me [NCS Release]</li>
+            <li>Andromedik - SHE [NCS Release]</li>
+            <li>Anixto - Ride or Die [NCS Release]</li>
+            <li>Anna Yvette - Red Line [NCS Release]</li>
+            <li>Anna Yvette - Running Out of Time [NCS Release]</li>
+            <li>Approaching Nirvana & Alex Holmes - Darkness Comes [NCS Release]</li>
+            <li>Arcando - In My Head (feat. Britt Lari) [NCS Release]</li>
+            <li>Arlow & Shiah Maisel - 21 [NCS Release]</li>
+            <li>Arlow - Feel So Lucky [NCS Release]</li>
+            <li>Arlow - Freefall [NCS Release]</li>
+            <li>Arlow - How Do You Know [NCS Release]</li>
+            <li>Arya & blankfaces - Daydream [NCS Release]</li>
+            <li>Ascence - About You [NCS Release]</li>
+            <li>Ascence - Konnichiwa [NCS Release]</li>
+            <li>Ascence - Places Like That [NCS Release]</li>
+            <li>Ascence - Rules [NCS Release]</li>
+            <li>Ascence - Without You [NCS Release]</li>
+            <li>Asketa & Natan Chaim x Requenze x M.I.M.E - Warriors [NCS Release]</li>
+            <li>Au5 - Interstellar (feat. Danyka Nadeau) [NCS Release]</li>
+            <li>Audioscribe - Shimmer [NCS Release]</li>
+            <li>AXEN & HYLO - Habits (feat. AKACIA) [NCS Release]</li>
+            <li>Axol & Hoober - How We Do It (ft. Marvin Divine) [NCS Release]</li>
+            <li>Axol & Max Hurrell - Shots Fired [NCS Release]</li>
+            <li>Axollo - Silence (ft. Josh Bogert) [NCS Release]</li>
+            <li>Barren Gates & BEAUZ - Tomorrow (feat. Harley Bird) [NCS Release]</li>
+            <li>Barren Gates - Devil (VIP) [NCS Release]</li>
+            <li>Barren Gates - Devil [NCS Release]</li>
+            <li>Barren Gates - Obey [NCS Release]</li>
+            <li>Barren Gates - Slow Down [NCS Release]</li>
+            <li>Barren Gates - You Made A Monster [NCS Release]</li>
+            <li>Beatcore & Ashley Apollodor - Burning Bridges [NCS Release]</li>
+            <li>Beatcore & Ashley Apollodor - Everyday [NCS Release]</li>
+            <li>BEAUZ & JVNA - Crazy [NCS Release]</li>
+            <li>BEAUZ & Momo - Won't Look Back [NCS Release]</li>
+            <li>Beave - Talk [NCS Release]</li>
+            <li>Besomorph & Arcando & Neoni - Army [NCS Release]</li>
+            <li>Besomorph & Coopex - Redemption (ft. Riell) [NCS Release]</li>
+            <li>Besomorph x EMM - Afterlife [NCS Release]</li>
+            <li>BH - Holding On [NCS Release]</li>
+            <li>Blooom & Ghost'n'Ghost - Desire [NCS Release]</li>
+            <li>Blooom - Be Around [NCS Release]</li>
+            <li>borne & Arya - One More Try (feat. imallryt) [NCS Release]</li>
+            <li>Brook Xiao - Fire (ft. Rachel Horter) [NCS Release]</li>
+            <li>Cadmium - Change Your Mind [NCS Release]</li>
+            <li>Cadmium - Click & Scroll (feat. Eli Raain & Veronica Bravo) [NCS Release]</li>
+            <li>Cadmium X Paul Flint - A Stranger's Dead [NCS Release]</li>
+            <li>Cajama - You Did Me Wrong [NCS Release]</li>
+            <li>CARBIN & hayve - Murderer (feat. Emily Makis) [NCS Release]</li>
+            <li>Carl Zeer & Waterbeld & Fearon - Talk To Me [NCS Release]</li>
+            <li>Cartoon & Andromedik - Whatever (ft. Jüri Pootsmann) [NCS Release]</li>
+            <li>Cartoon - Don't Be A Stranger (feat. Jason Diaz) [NCS Release]</li>
+            <li>Cartoon - Howling (ft. Asena) (Andromedik Remix) [NCS Release]</li>
+            <li>Cartoon - Howling (Ft. Asena) [NCS Release]</li>
+            <li>Cartoon - Más Y Más (feat. Daniel Levi) [NCS Release]</li>
+            <li>Cartoon - On & On (Feat. Daniel Levi) (nuumi Remix) [NCS Release]</li>
+            <li>Cartoon - On & On (ft. Daniel Levi) (Cartoon x HAVSUN x WAYOUT Remix) [NCS Release]</li>
+            <li>Cartoon x nublu x Gameboy Tetris - Biology [NCS Release] (Official Music Video)</li>
+            <li>Castion - Banger Machine [NCS Release]</li>
+            <li>Chenda & Shiah Maisel - Find You There [NCS Release]</li>
+            <li>CHENDA & Shiah Maisel - Ten More Minutes [NCS Release]</li>
+            <li>CHENDA - Mr. Bully [NCS Release]</li>
+            <li>Chime & MDK - Arcade Dwellers [NCS Release]</li>
+            <li>Chris Later & Dany Yeager - There's Nobody Else [NCS Release]</li>
+            <li>Chris Linton & Cadmium - Slow Down [NCS Release - Lyric Video]</li>
+            <li>Clarx & Harddope - Castle [NCS Release]</li>
+            <li>Clarx & Moe Aly - Healing [NCS Release]</li>
+            <li>Clarx - Bones [NCS Release]</li>
+            <li>Clarx - Disco [NCS Release]</li>
+            <li>Clarx - Money [NCS Official Video]</li>
+            <li>Clarx - Ride [NCS Release]</li>
+            <li>Clarx - Shakedown [NCS Release]</li>
+            <li>Convex - 4U (feat. Jex Jordyn) [NCS Release]</li>
+            <li>Convex - Home Soon (feat. Micah Martin) [NCS Release]</li>
+            <li>Coopex & NEZZY - You And Me [NCS Release]</li>
+            <li>Coopex - I Miss You [NCS Release]</li>
+            <li>Coopex - Over The Sun [NCS Release]</li>
+            <li>Coopex, EBEN, Shiah Maisel - Ruined My Life [NCS Release]</li>
+            <li>Cream Blade - Heavenly (feat. Romi) [NCS Release]</li>
+            <li>Culture Code - Fairytale (feat. Amanda Collis) [NCS Release]</li>
+            <li>Cytrax - Feelings (feat. Émilie Rachel) [NCS Release]</li>
+            <li>Dark Heart - Crash Test Dummy [NCS Release]</li>
+            <li>Deaf Kev - Invincible Part II (feat. Sendi Hoxha) [NCS10 Release]</li>
+            <li>DEAF KEV - Safe & Sound with Sendi Hoxha [NCS Release]</li>
+            <li>Debris & Jonth - Game Time [NCS Release]</li>
+            <li>Diamond Eyes - Father [NCS Release]</li>
+            <li>Diamond Eyes - Gravity [NCS Release]</li>
+            <li>Diamond Eyes - Hold On [NCS Release]</li>
+            <li>Diamond Eyes - Stars [NCS Release]</li>
+            <li>DigEx - Fall In Love [NCS Release]</li>
+            <li>DigEx - Trust Me [NCS Release]</li>
+            <li>Dirty Palm - No Stopping Love [NCS Release]</li>
+            <li>Dirty Palm - Ropes (feat. Chandler Jewels) [NCS10 Release]</li>
+            <li>Dirty Palm - To The Back (feat. Purple Velvet Curtains) [NCS Release]</li>
+            <li>Distrion - Alibi (ft. Heleen) [NCS Release]</li>
+            <li>Distrion - Chasing Ghosts (feat. Max Landry) [NCS Release]</li>
+            <li>Diviners - Escape (feat. Rossy) [NCS Release]</li>
+            <li>Diviners - Stockholm Lights [NCS Release]</li>
+        </ol>
+    </ul>
+    <footer>
+        <hr />
+        <div>
+            <a href="ncs_music_1.html">1</a>
+            <a href="ncs_music_2.html">2</a>
+            <a href="ncs_music_3.html">3</a>
+            <a href="ncs_music_4.html">4</a>
+            <a href="ncs_music_5.html">5</a>
+            <a href="#"> >></a>
+        </div>
+        <!-- ddd -->
+        <hr />
+    </footer>
+</body>
+
+</html>

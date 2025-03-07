@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/music.css">
+    <link rel="shortcut icon" type="images/x-icon" href="images/NCS_logo.jpg">
+    <title>NCS Music Play</title>
+    <html>
+
+    <head>
+
+        <title>NCS Music Play</title>
+        <script type="text/javascript">
+
+            function init() {
+                document.addEventListener('click', function (evt) { if (evt.target.tagName.toLowerCase() == 'li') { play(evt.target); } }, false);
+            }
+
+            function skip() {
+            }
+
+            function play(elem) {
+                var audio = document.getElementById('audio');
+                audio.src = 'music/ncs_3/' + elem.textContent + '.mp3';
+                audio.play();
+                elem.className = 'playing';
+                skip = function () {
+                    elem.className = '';
+                    if (elem.nextElementSibling) {
+                        play(elem.nextElementSibling);
+                    }
+                }
+            }
+        </script>
+        <style type="text/css">
+            ul {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+            }
+
+            li:hover {
+                text-decoration: underline;
+            }
+
+            li.playing {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+<body onload="init()">
+    <h1 style="text-align: center;">NCS Music Play</h1>
+    <hr />
+    <div class="musicplay">
+        <audio id="audio" controls="controls" onerror="alert('Could not play MP3 audio file ' + this.src +'!');"
+            onended="skip()" style="width: 1400px;">
+            HTML5 MP3 audio required (Chrome, Safari, IE 9?)
+        </audio>
+    </div>
+    <ul>
+        <ol type="1">
+            <li>Diviners & Azertion - Reality (feat. Dayce Williams) [NCS Release].mp3</li>
+            <li>Diviners X Riell - Slow [NCS Release].mp3</li>
+            <li>Doctor Neiman - Wait For Me (Feat. Micah Martin) [NCS Release].mp3</li>
+            <li>Domastic & Anna Yvette - Echoes [NCS Release].mp3</li>
+            <li>Domastic - Memories [NCS Release].mp3</li>
+            <li>Donkong - Binary (feat. HANNY) [NCS Release].mp3</li>
+            <li>Dread Pitt - Reckless (ft. C.) [NCS Release].mp3</li>
+            <li>Drolood - Break It [NCS Release].mp3</li>
+            <li>Droptek - New Style [NCS Release].mp3</li>
+            <li>Dwonji - COME UP [NCS Release].mp3</li>
+            <li>EBEN - Promise [NCS Release].mp3</li>
+            <li>Egzod & Arcando - Runaway (feat. Mathew V) [NCS Release].mp3</li>
+            <li>Egzod & EMM - Don't Surrender [NCS Release].mp3</li>
+            <li>Egzod & EMM - Game Over [NCS Release].mp3</li>
+            <li>Egzod & Maestro Chives - Royalty (ft. Neoni) [NCS Release].mp3</li>
+            <li>Egzod & Neoni - The Revolution [NCS Release].mp3</li>
+            <li>Egzod & Wasiu - Mutiny [NCS Release].mp3</li>
+            <li>Egzod - Rise Up (ft. Veronica Bravo & M.I.M.E) [NCS Release].mp3</li>
+            <li>Electro-Light & Shiah Maisel - Letter [NCS Release].mp3</li>
+            <li>Electro-Light - Where It All Began (feat. Danyka Nadeau) [NCS Release].mp3</li>
+            <li>Elektronomia & RUD - Memory [NCS Release].mp3</li>
+            <li>Elektronomia - Breeze [NCS Release].mp3</li>
+            <li>Elektronomia - Collide [NCS Release].mp3</li>
+            <li>Elektronomia - Heaven [NCS Release].mp3</li>
+            <li>Elektronomia - Sky High pt. II [NCS Release].mp3</li>
+            <li>Elektronomia x Lunaar x Donna Tella - Champions [NCS Release].mp3</li>
+            <li>ElementD & Chris Linton - Ascend [ NCS Release - EDM - Hardstyle ].mp3</li>
+            <li>Ellis - Clear My Head (AFISHAL Drum Remix) [NCS Release].mp3</li>
+            <li>Ellis - Clear My Head [NCS Release].mp3</li>
+            <li>EMDI - Hurts Like This (feat. Veronica Bravo) [NCS Release].mp3</li>
+            <li>EMDI x RØGUENETHVN - Let Your Heartbreak (feat. Leo the Kind) [NCS Release].mp3</li>
+            <li>Evanly - Hurt Me [NCS Release].mp3</li>
+            <li>Everen Maxwell - A Day at Sea [NCS Release].mp3</li>
+            <li>Everen Maxwell - Hyperphantasia [NCS Release].mp3</li>
+            <li>Fabian Mazur & Arcando - Elevate [NCS Release].mp3</li>
+            <li>Facading - Feelings [NCS Release].mp3</li>
+            <li>Facading - Freefalling [NCS Release].mp3</li>
+            <li>Facading - Take it Down [NCS Release].mp3</li>
+            <li>Facading - Walk Away [NCS Release].mp3</li>
+            <li>Facading - You and Me [NCS Release].mp3</li>
+            <li>Fareoh - Illuminati [NCS Release].mp3</li>
+            <li>Fiko - Waiting For You [NCS Release].mp3</li>
+            <li>FROZT, Andrew A - Sleeping Till Noon (feat. Moav) [NCS Release].mp3</li>
+            <li>Futuristik - Forgive Me [NCS Release].mp3</li>
+            <li>Futuristik - Like U Say [NCS Release].mp3</li>
+            <li>GALLIUM - All I Wanna [NCS Release].mp3</li>
+            <li>Goodknight. - Freedom [NCS Release].mp3</li>
+            <li>Halcyon & Valentina Franco - Runaway (Heuse Remix) [NCS Release].mp3</li>
+            <li>Halvorsen - Band-Aid [NCS Release].mp3</li>
+            <li>Halvorsen - CTRL Z [NCS Release].mp3</li>
+            <li>hayve - Red Light [NCS Release].mp3</li>
+            <li>hayve x ROY KNOX - Give Up On You (feat. imallryt) [NCS Release].mp3</li>
+            <li>Heather Sommer & Uplink - Chance On Faith [NCS Release].mp3</li>
+            <li>Heuse & Caravn - Spirits Say [NCS Release].mp3</li>
+            <li>Heuse & METAHESH - I'll Be Here (Feat. Noctilucent) [NCS Release].mp3</li>
+            <li>Heuse & Tom Wilson - Ignite [NCS Release].mp3</li>
+            <li>Heuse & WOLFHOWL & Riell - Daylight [NCS Release].mp3</li>
+            <li>Heuse & Woolley - Don't Hold Me Down (Feat. TARYN) [NCS Release].mp3</li>
+            <li>Heuse - That Night (Feat. Austin Salter) [NCS Release].mp3</li>
+            <li>Hoober - Higher (feat. Vanessa Campagna) [NCS Release].mp3</li>
+            <li>Hush - Freaky [NCS Release].mp3</li>
+            <li>HYLO - Headstrong ft. Mikey Ceaser & Akacia [NCS Release].mp3</li>
+            <li>Hylo x Disfigure - I'm Here [NCS Release].mp3</li>
+            <li>Icehunt - Back To Time (with Broad Run, Arnie Woods & Ethan Heckard) [NCS Release].mp3</li>
+            <li>if found - Dead of Night (VIP) [NCS Release].mp3</li>
+            <li>if found - Dead of Night [NCS Release].mp3</li>
+            <li>if found - Need You [NCS Release].mp3</li>
+            <li>InfiNoise - Sunlight (Feat. Nilka) [NCS Release].mp3</li>
+            <li>IntoAlter x Too Martian x Peter Piffen - When We Leavin [NCS Release].mp3</li>
+            <li>Isolated - Circus [NCS Release].mp3</li>
+            <li>Jack Shore & Tollef - Dreaming of Me (feat. Jaime Deraz) [NCS Release].mp3</li>
+            <li>Jagsy & Tom Wilson - All My Love (ft. braev) [NCS Release].mp3</li>
+            <li>James Mercy - Take You On (ft. PhiloSofie) [NCS Release].mp3</li>
+            <li>James Roche - Away [NCS Release].mp3</li>
+            <li>Jay Eskar & Doxed - Let's Run Away (feat. Rico 56) [NCS Release].mp3</li>
+            <li>Jay Eskar - To The Top (feat. Srikar) [NCS Release].mp3</li>
+            <li>Jim Yosef & EMM - Shudder [NCS Release].mp3</li>
+            <li>Jim Yosef & Sara Skinner - WILDFIRE [NCS Official Video].mp3</li>
+            <li>Jim Yosef & Shiah Maisel - Slow Down [NCS Release].mp3</li>
+            <li>Jim Yosef - Fall With Me [NCS Release].mp3</li>
+            <li>Jim Yosef - Firefly pt. II (ft. STARLYTE) [NCS Release].mp3</li>
+            <li>Jim Yosef - Let You Go [NCS Release].mp3</li>
+            <li>Jim Yosef - Moonlight [NCS Release].mp3</li>
+            <li>Jim Yosef x ROY KNOX - Sun Goes Down [NCS Release].mp3</li>
+            <li>JNATHYN - Dioma (Demo TikTok Version) [NCS Release].mp3</li>
+            <li>JNATHYN - Dioma [NCS Release].mp3</li>
+            <li>Johnning - Don't Want U Back (feat. ÉWN & whogaux) [NCS Release].mp3</li>
+            <li>Johnning - WHAT THE HELL [NCS Release].mp3</li>
+            <li>Jonas Wang - Shining [NCS Release].mp3</li>
+            <li>Jone - Everything [NCS Release].mp3</li>
+            <li>Jonny Koch & Annie Sollange - LOVE ME [NCS Release].mp3</li>
+            <li>Jonth & Hilefex - Non Stop [NCS Release].mp3</li>
+            <li>Jonth - Badniss (feat. VinDon) [NCS Release].mp3</li>
+            <li>Jonth - Collapse [NCS Release].mp3</li>
+            <li>JPB & Mendum - Losing Control (feat. Marvin Divine) [NCS Release].mp3</li>
+            <li>JPB - LONG NIGHT (feat. Marvin Divine) [NCS Release].mp3</li>
+            <li>JPB - What I Want [NCS Release].mp3</li>
+            <li>Julius Dreisig & Mandrazo - Swalla [NCS Release].mp3</li>
+            <li>Julius Dreisig - Where'd You Go (feat. Luna Lark) [NCS Release].mp3</li>
+            <li>Kaivon - First Love (feat. Pauline Herr) [NCS Release].mp3</li>
+            <li>Kato, Spyker, TOBSIK - Odyssey [NCS Release].mp3</li>
+            <li>Keerthin - Escape [NCS Release].mp3</li>
+            <li>KIRA - New World [NCS Release].mp3</li>
+            <li>Kisma - Fly Again [NCS Release].mp3</li>
+            <li>Kovan & LaCrème - Miracle (feat. Daimy Lotus) [NCS Release].mp3</li>
+            <li>Koven & ROY KNOX - About Me [NCS Official Video].mp3</li>
+            <li>Koven x ROY KNOX - About Me [NCS Release].mp3</li>
+            <li>Kozah - Cali4nia [NCS Release].mp3</li>
+            <li>Kozah - Hyperdrive [NCS Release].mp3</li>
+            <li>Kozah - Nobody [NCS Release].mp3</li>
+            <li>Kozah - Paradox [NCS Release].mp3</li>
+            <li>LBLVNC & Godmode - Power ! [NCS Release].mp3</li>
+            <li>Le Malls - Come Through (feat. Ari G.) [NCS Release].mp3</li>
+            <li>Leat'eq & Aleksei & ELEX - They Watchin Me (Feat.Will Wes) [NCS Release].mp3</li>
+            <li>Leat'eq - Sunrise [NCS Release].mp3</li>
+            <li>Levianth & Acejax - Real Love [NCS Release].mp3</li>
+            <li>Linko - Goodbye [NCS Release].mp3</li>
+            <li>Lochlainn - The Garden [NCS Release].mp3</li>
+            <li>Lost Identities x Rob Roth - For Me [NCS Release].mp3</li>
+            <li>ÉWN - The Light [NCS Release].mp3</li>
+        </ol>
+    </ul>
+    <footer>
+        <hr />
+        <div>
+            <a href="ncs_music_1.html">1</a>
+            <a href="ncs_music_2.html">2</a>
+            <a href="ncs_music_3.html">3</a>
+            <a href="ncs_music_4.html">4</a>
+            <a href="ncs_music_5.html">5</a>
+            <a href="#"> >></a>
+        </div>
+        <!-- ddd -->
+        <hr />
+    </footer>
+</body>
+
+</html>
