@@ -1,4 +1,8 @@
 {
+  "homepage" : "https://yudaji-57.github.io/Portfolio_Web/",
+  "scripts": {
+    "deploy" : "gh-pages -d public"
+  },
   "dependencies": {
     "gh-pages": "^6.3.0"
   }
